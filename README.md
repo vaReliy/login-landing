@@ -1,27 +1,41 @@
-# LoginLanding
+# Login-Landing | Demo Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+This project is a demonstration of an Angular application with routing. It showcases a simple project structure with three routes: `'' (empty)`, `/home`, and `/login`.
 
-## Development server
+### Project Structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The project follows a modular structure within the app module. It consists of the following modules:  
 
-## Code scaffolding
+- **[Auth Module](./src/app/auth/auth.module.ts)**: This module serves as the core for mock-authentication mechanics. Also, it includes the [global-routes.ts](./src/app/auth/global-routes.ts) file, which defines an enum with global routes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **[Login Module](./src/app/login/login.module.ts)**: This module includes the login page accessible via the `/login` route and the landing page through the `'' (empty)` route.
 
-## Build
+- **[System Module](./src/app/system/system.module.ts)**: This module is designed for authorized users and features a dashboard page accessible via the `/home` route.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Features
 
-## Running unit tests
+- **Routing**: The project demonstrates the usage of Angular routing to navigate between different pages based on the user's authentication status. Authorized users can only access the **[System Module](./src/app/system/system.module.ts)**, while non-authorized users can only access the **[Login Module](./src/app/login/login.module.ts)**.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Login Page**: The login page allows users to authenticate (in the demo, without providing their credentials).
 
-## Running end-to-end tests
+- **Landing Page**: The landing page serves as the entry point for non-authorized users, providing them with an overview of the application's features.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Dashboard Page**: The dashboard page offers a personalized experience for authorized users, showcasing relevant data and functionalities. Additionally, this page serves as the entry point for authorized users.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+###Usage
+
+To run the project locally, follow these steps:
+```
+#Clone the repository:
+git clone git@github.com:vaReliy/login-landing.git
+
+#Install the dependencies:
+npm install
+
+#Start the development server:
+npm start
+
+#Open the application in your browser:
+http://localhost:4200
+```
